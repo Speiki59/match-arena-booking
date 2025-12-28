@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import sqlite3 from "sqlite3";
 import { randomUUID } from "crypto";
+import fetch from "node-fetch";
 
 const app = express();
 app.use(cors());
