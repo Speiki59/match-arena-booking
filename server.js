@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import sqlite3 from "sqlite3";
 import { randomUUID } from "crypto";
-import fetch from "node-fetch";
 
 const TELEGRAM_TOKEN = "8538575843:AAEADUT8Z6782AVyMBm3YyURc2OCcGoWfto";
 const TELEGRAM_CHAT_ID = "1173996247";
