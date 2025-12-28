@@ -90,6 +90,16 @@ app.post("/booking", (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
+app.get("/bookings", (req, res) => {
+  db.all(
+    "SELECT date, time, hall, name, phone FROM bookings ORDER BY date, time",
+    (err, rows) => {
+      if (err) return res.status(500).json({ error: err.message });
+      res.json(rows);
+    }
+  );
+});
+
 app.listen(PORT, () => {
   console.log("Server running on port", PORT);
 });
